@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuf Abdulrahman Shareedh - About Me</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        section {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .summary p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .work-experience ul ul {
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .skill-item {
+            background: var(--light-color);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-links, .other-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .link-card {
+            background: var(--light-color);
+            padding: 1rem;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .link-card:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .link-card a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            display: block;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-section {
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-section">
+                <img src="./MyPic.jpg" alt="Yusuf Abdulrahman Shareedh" class="profile-img">
+                <h1>Yusuf Abdulrahman Shareedh</h1>
+                <p>ITC Student | Passionate Programmer | Problem Solver</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>I'm an ITC student graduating in early 2026 at AOU University. I have a great passion for programming, enjoy solving problems, and love learning new technologies. My goal is to become a full-stack developer and contribute to innovative projects that make a difference.</p>
+        </section>
+        
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Arab Open University</strong> – Bachelor of Information Technology and Computing (Graduation: 2025/2026)</li>
+                <li><strong>Sheikh Abdullah Bin Isa Al Khalifa Technical Secondary Boys School</strong> – High School Certificate in Electronics (Graduated with Honors)</li>
+            </ul>
+        </section>
+        
+        <section class="work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <strong>Programmer at Ministry of Finance</strong><br>
+                    <em>October 2025 - December 2025</em>
+                    <ul>
+                        <li>Advanced in HTML</li>
+                        <li>Advanced in CSS</li>
+                        <li>Flexbox</li>
+                        <li>Grid</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Front End Development</div>
+                <div class="skill-item">Back End Development</div>
+                <div class="skill-item">Cybersecurity Fundamentals</div>
+                <div class="skill-item">Database Fundamentals</div>
+                <div class="skill-item">Problem Solving</div>
+                <div class="skill-item">Team Collaboration</div>
+            </div>
+        </section>
+        
+        <section class="certifications">
+            <h2>Certifications & Achievements</h2>
+            <ul>
+                <li>Achieved 2nd Place in the National School Robotics Competition during high school.</li>
+                <li>Developed a Blood Bank website and mobile application in collaboration with the Ministry of Health, both connected to the same database to manage blood donations efficiently.</li>
+            </ul>
+        </section>
+        
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="project-links">
+                <div class="link-card">
+                    <a href="./My projects/BBB Project/BBB Project.html">Blood Bank Bahrain Project (BBB Project)</a>
+                </div>
+                <div class="link-card">
+                    <a href="My projects/PC Flow Project/PCFlow.html">PC Flow Project</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="other">
+            <h2>Other</h2>
+            <div class="other-links">
+                <div class="link-card">
+                    <a href="./Languages/Languages.html">Languages</a>
+                </div>
+                <div class="link-card">
+                    <a href="./Hobbies/Hobbies.html">My Hobbies</a>
+                </div>
+                <div class="link-card">
+                    <a href="./Contact Me/Contact.html">Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Yusuf Abdulrahman Shareedh. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
