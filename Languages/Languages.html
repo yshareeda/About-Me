@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages - Yusuf Abdulrahman Shareedh</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .languages-section {
+            flex: 1;
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .languages-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .language-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .category-title {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .language-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .language-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            background: var(--light-color);
+        }
+        
+        .language-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .language-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .language-details {
+            flex: 1;
+        }
+        
+        .language-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+        
+        .language-level {
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .programming-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tech-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+        
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .tech-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-level {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .level-advanced {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .level-intermediate {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .languages-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .programming-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yusuf Abdulrahman Shareedh</h1>
+            <p>ITC Student | Passionate Programmer | Problem Solver</p>
+            <a href="../index.html" class="back-link">← Back to About Me</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="languages-section">
+            <h2 class="section-title">Languages</h2>
+            
+            <div class="languages-container">
+                <div class="language-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-language"></i>
+                        Spoken Languages
+                    </h3>
+                    <ul class="language-list">
+                        <li class="language-item">
+                            <div class="language-icon">
+                                <i class="fas fa-globe-africa"></i>
+                            </div>
+                            <div class="language-details">
+                                <span class="language-name">Arabic</span>
+                                <span class="language-level">Native Language</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="language-item">
+                            <div class="language-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="language-details">
+                                <span class="language-name">English</span>
+                                <span class="language-level">Fluent Language</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="language-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages & Technologies
+                    </h3>
+                    <div class="programming-grid">
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="tech-name">HTML</div>
+                            <div class="tech-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="tech-name">CSS</div>
+                            <div class="tech-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="tech-name">Node.js</div>
+                            <div class="tech-level">Learning</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="tech-name">.NET</div>
+                            <div class="tech-level">Learning</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="tech-name">React.js</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="tech-name">Database</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="tech-name">Next.js</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="language-category">
+                <h3 class="category-title">
+                    <i class="fas fa-chart-line"></i>
+                    Skills Overview
+                </h3>
+                <p style="text-align: center; margin-bottom: 1.5rem;">
+                    Continuously expanding my technical skills and exploring new technologies to stay current 
+                    with industry trends and best practices.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <div style="background: var(--light-color); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; color: var(--secondary-color); font-weight: bold;">7+</div>
+                        <div>Technologies</div>
+                    </div>
+                    <div style="background: var(--light-color); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; color: var(--secondary-color); font-weight: bold;">2</div>
+                        <div>Spoken Languages</div>
+                    </div>
+                    <div style="background: var(--light-color); padding: 1rem; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem; color: var(--secondary-color); font-weight: bold;">2</div>
+                        <div>Advanced Skills</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Yusuf Abdulrahman Shareedh. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
