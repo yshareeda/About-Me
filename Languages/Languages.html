@@ -82,8 +82,8 @@
         }
         
         .languages-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 3rem;
             margin-bottom: 3rem;
         }
@@ -232,10 +232,6 @@
         }
         
         @media (max-width: 768px) {
-            .languages-container {
-                grid-template-columns: 1fr;
-            }
-            
             .programming-grid {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
@@ -251,7 +247,7 @@
     <header>
         <div class="container">
             <h1>Yusuf Abdulrahman Shareedh</h1>
-            <p>ITC Student | Passionate Programmer | Problem Solver</p>
+            <p>ITC Graduated | Passionate Programmer | Full-Stack .NET Developer (Entry Level)</p>
             <a href="../index.html" class="back-link">← Back to About Me</a>
         </div>
     </header>
@@ -261,6 +257,86 @@
             <h2 class="section-title">Languages</h2>
             
             <div class="languages-container">
+                <div class="language-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages & Technologies
+                    </h3>
+                    <div class="programming-grid">
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fab fa-html5"></i></div>
+                            <div class="tech-name">HTML</div>
+                            <div class="tech-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+                            <div class="tech-name">CSS</div>
+                            <div class="tech-level level-advanced">Advanced</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fab fa-js"></i></div>
+                            <div class="tech-name">JavaScript</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-code"></i></div>
+                            <div class="tech-name">CSHTML (Razor)</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-code"></i></div>
+                            <div class="tech-name">C#</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div class="tech-name">ASP.NET MVC</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="tech-name">.NET Development</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">SQL Server (SSMS)</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fas fa-database"></i></div>
+                            <div class="tech-name">Database Design</div>
+                            <div class="tech-level level-intermediate">Intermediate</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fab fa-react"></i></div>
+                            <div class="tech-name">React.js</div>
+                            <div class="tech-level">Learning</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+                            <div class="tech-name">Next.js</div>
+                            <div class="tech-level">Learning</div>
+                        </div>
+                        
+                        <div class="tech-card">
+                            <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+                            <div class="tech-name">Node.js</div>
+                            <div class="tech-level">Learning</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="language-category">
                     <h3 class="category-title">
                         <i class="fas fa-language"></i>
@@ -293,70 +369,6 @@
                         </li>
                     </ul>
                 </div>
-                
-                <div class="language-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-code"></i>
-                        Programming Languages & Technologies
-                    </h3>
-                    <div class="programming-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <div class="tech-name">HTML</div>
-                            <div class="tech-level level-advanced">Advanced</div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <div class="tech-name">CSS</div>
-                            <div class="tech-level level-advanced">Advanced</div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <div class="tech-name">Node.js</div>
-                            <div class="tech-level">Learning</div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="tech-name">.NET</div>
-                            <div class="tech-level">Learning</div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <div class="tech-name">React.js</div>
-                            <div class="tech-level level-intermediate">Intermediate</div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="tech-name">Database</div>
-                            <div class="tech-level level-intermediate">Intermediate</div>
-                        </div>
-                        
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <div class="tech-name">Next.js</div>
-                            <div class="tech-level level-intermediate">Intermediate</div>
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <div class="language-category">
@@ -388,7 +400,7 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2023 Yusuf Abdulrahman Shareedh. All rights reserved.</p>
+            <p>&copy; 2025 Yusuf Abdulrahman Shareedh. All rights reserved.</p>
         </div>
     </footer>
 </body>
